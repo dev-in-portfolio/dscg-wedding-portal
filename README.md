@@ -50,3 +50,10 @@ When these URLs are configured, visitors are directed to the live deployments. I
 - Strict **★★★ complexity ceiling** (no unrequested booking engines, guest SaaS portals, or software overhead).
 - Mobile-first, fully responsive, and accessible design.
 - Respects `prefers-reduced-motion`.
+
+## Production Status
+
+- **Status**: Finalized and verified.
+- **Production Build**: Clean Vite production build to `dist/`.
+- **Ecosystem Role**: Standalone portal and entry gateway for the DSCG Wedding Websites ecosystem.
+
