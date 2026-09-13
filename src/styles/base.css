@@ -95,6 +95,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-block: var(--space-3xl);
   position: relative;
   z-index: 1;
+  scroll-margin-top: 5.5rem;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
 }
 
 .section-alt {

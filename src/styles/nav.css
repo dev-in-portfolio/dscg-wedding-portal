@@ -1,4 +1,4 @@
-﻿/* Navigation */
+/* Navigation */
 .site-header {
   position: fixed;
   top: 0;
@@ -161,9 +161,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(6, 7, 10, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  height: calc(100vh - 5rem);
+  height: calc(100dvh - 5rem);
+  background-color: #06070A;
   padding: var(--space-xl) var(--space-md);
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
   flex-direction: column;
