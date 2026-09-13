@@ -1,0 +1,70 @@
+/* Craft & Boundaries */
+.boundary-box {
+  background: linear-gradient(135deg, #1C2029 0%, #12151B 100%);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl) var(--space-xl);
+  color: var(--color-text-light);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.boundary-content h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem);
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: var(--space-md);
+  line-height: 1.25;
+}
+
+.boundary-content p {
+  color: var(--color-text-light-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: var(--space-md);
+}
+
+.boundary-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.boundary-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.boundary-pillar-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.boundary-pillar-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.2rem;
+}
+
+.boundary-pillar-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-light-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .boundary-box {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
