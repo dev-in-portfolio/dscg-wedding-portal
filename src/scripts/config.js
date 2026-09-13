@@ -24,7 +24,7 @@ export const CONFIG = {
   COMPANY_NAME: 'Dark Star Consulting Group',
   SERVICE_NAME: 'DSCG Wedding Websites',
   PARENT_CAPABILITY: 'Web Design / Website Development',
-  CONTACT_EMAIL: 'dark.star.consulting.corp@gmail.com',
+  CONTACT_EMAIL: 'darkstar@darkstarconsultinggroup.com',
   PRICING: {
     ESSENTIAL: 495,
     WEBSITE: 795,

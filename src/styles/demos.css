@@ -113,10 +113,10 @@
   margin-bottom: var(--space-md);
 }
 
-.demo-styles-pill-box {
+.demo-styles-info-box {
   background-color: var(--color-bg-alt);
   border-radius: var(--radius-sm);
-  padding: 0.75rem;
+  padding: 0.85rem 1rem;
   margin-bottom: var(--space-lg);
   border: 1px solid var(--color-border-subtle);
 }
@@ -126,25 +126,15 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-text-subtle);
+  color: var(--color-accent);
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
-.demo-styles-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.style-pill {
-  font-size: 0.72rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: var(--radius-full);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  font-weight: 500;
+.demo-styles-text {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
 }
 
 .demo-card-action {
