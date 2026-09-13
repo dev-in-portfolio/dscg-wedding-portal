@@ -6,7 +6,9 @@
 }
 
 .addon-card {
-  background-color: var(--color-surface);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
@@ -17,32 +19,34 @@
 }
 
 .addon-card:hover {
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.12);
 }
 
 .addon-icon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: var(--radius-sm);
-  background-color: var(--color-bg-alt);
+  background: rgba(212, 175, 55, 0.08);
   color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-sm);
-  border: 1px solid var(--color-border-subtle);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
 }
 
 .addon-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #FFFFFF;
   margin-bottom: 0.35rem;
 }
 
 .addon-desc {
   font-size: 0.875rem;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  line-height: 1.6;
 }

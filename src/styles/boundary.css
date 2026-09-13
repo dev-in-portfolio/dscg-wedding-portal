@@ -1,7 +1,7 @@
 /* Craft & Boundaries */
 .boundary-box {
-  background: linear-gradient(135deg, #1C2029 0%, #12151B 100%);
-  border: 1px solid var(--color-border-dark);
+  background: linear-gradient(135deg, rgba(22, 28, 42, 0.8) 0%, rgba(10, 13, 19, 0.95) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl) var(--space-xl);
   color: var(--color-text-light);
@@ -9,11 +9,12 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--space-2xl);
   align-items: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
 }
 
 .boundary-content h3 {
   font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem);
+  font-size: clamp(1.85rem, 1.5rem + 1.4vw, 2.65rem);
   font-weight: 400;
   color: #FFFFFF;
   margin-bottom: var(--space-md);
@@ -21,8 +22,8 @@
 }
 
 .boundary-content p {
-  color: var(--color-text-light-muted);
-  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
   line-height: 1.65;
   margin-bottom: var(--space-md);
 }
@@ -36,30 +37,36 @@
 .boundary-pillar-item {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.04);
+  gap: 1.15rem;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
   padding: var(--space-md);
+  transition: border-color var(--transition-normal);
+}
+
+.boundary-pillar-item:hover {
+  border-color: rgba(212, 175, 55, 0.35);
 }
 
 .boundary-pillar-icon {
   color: var(--color-accent);
   flex-shrink: 0;
   margin-top: 0.15rem;
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.3));
 }
 
 .boundary-pillar-title {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: #FFFFFF;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .boundary-pillar-desc {
-  font-size: 0.85rem;
-  color: var(--color-text-light-muted);
-  line-height: 1.5;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
 }
 
 @media (max-width: 900px) {

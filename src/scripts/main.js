@@ -1,12 +1,183 @@
 import { CONFIG, isUrlConfigured } from './config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initStarlightCanvas();
   initHeaderScroll();
   initMobileNav();
   initSmoothScroll();
   initDestinationButtons();
+  initStyleTransformer();
   initModal();
 });
+
+/**
+ * 1. Dark Star Starlight & Volumetric Ambient Canvas
+ * High performance, elegant floating stardust particles & champagne glows
+ */
+function initStarlightCanvas() {
+  const canvas = document.getElementById('starlight-canvas');
+  if (!canvas) return;
+
+  // Check prefers-reduced-motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let mouse = { x: null, y: null, radius: 120 };
+
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.x;
+    mouse.y = e.y;
+  }, { passive: true });
+
+  window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  // Stardust Particle Class
+  class Stardust {
+    constructor() {
+      this.reset();
+    }
+
+    reset() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.size = Math.random() * 2 + 0.8;
+      this.vx = (Math.random() - 0.5) * 0.25;
+      this.vy = (Math.random() - 0.5) * 0.25;
+      this.baseAlpha = Math.random() * 0.5 + 0.2;
+      this.alpha = this.baseAlpha;
+      this.pulseSpeed = Math.random() * 0.02 + 0.005;
+      this.pulsePhase = Math.random() * Math.PI * 2;
+      
+      const rand = Math.random();
+      if (rand < 0.6) {
+        this.color = '212, 175, 55'; // Champagne Gold
+      } else if (rand < 0.85) {
+        this.color = '245, 230, 180'; // Warm Pearl
+      } else {
+        this.color = '165, 175, 200'; // Moonlight
+      }
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.pulsePhase += this.pulseSpeed;
+      this.alpha = this.baseAlpha + Math.sin(this.pulsePhase) * 0.2;
+
+      // Mouse gentle interaction
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          this.x -= (dx / dist) * force * 1.5;
+          this.y -= (dy / dist) * force * 1.5;
+        }
+      }
+
+      if (this.x < -10 || this.x > width + 10 || this.y < -10 || this.y > height + 10) {
+        this.reset();
+      }
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${this.color}, ${Math.max(0.1, this.alpha)})`;
+      ctx.shadowBlur = this.size * 4;
+      ctx.shadowColor = `rgba(${this.color}, 0.5)`;
+      ctx.fill();
+    }
+  }
+
+  // Volumetric Glow Orb Class
+  class GlowOrb {
+    constructor(color, radius, speed) {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.radius = radius;
+      this.color = color;
+      this.vx = (Math.random() - 0.5) * speed;
+      this.vy = (Math.random() - 0.5) * speed;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      if (this.x < -this.radius || this.x > width + this.radius) this.vx *= -1;
+      if (this.y < -this.radius || this.y > height + this.radius) this.vy *= -1;
+    }
+
+    draw() {
+      const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+      grad.addColorStop(0, this.color);
+      grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  const particleCount = Math.min(width > 768 ? 65 : 30, 80);
+  const particles = Array.from({ length: particleCount }, () => new Stardust());
+  const orbs = [
+    new GlowOrb('rgba(212, 175, 55, 0.07)', 380, 0.2),
+    new GlowOrb('rgba(28, 38, 58, 0.15)', 450, 0.15),
+    new GlowOrb('rgba(212, 175, 55, 0.05)', 320, 0.25)
+  ];
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Draw ambient volumetric glows
+    orbs.forEach(orb => {
+      orb.update();
+      orb.draw();
+    });
+
+    // Draw stardust particles
+    ctx.shadowBlur = 0;
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+
+    // Draw delicate constellation links between nearby particles
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 90) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(212, 175, 55, ${(1 - dist / 90) * 0.15})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
 
 /**
  * Adds shadow & blurred backdrop to header on scroll
@@ -85,7 +256,7 @@ function initSmoothScroll() {
       const targetEl = document.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
-        const headerOffset = 80;
+        const headerOffset = 85;
         const elementPosition = targetEl.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -160,7 +331,7 @@ function initDestinationButtons() {
           title: targetName,
           tier: targetTier,
           repoId: repoId,
-          desc: 'This demo experience showcases 1 fictional wedding across 5 selectable visual styles. Once the Site deployment URL is established, clicking this launch button will open the live Netlify demo directly.'
+          desc: 'This demo experience showcases 1 fictional wedding across 5 selectable visual style variations. Once the Site deployment URL is established, clicking this launch button will open the live Netlify demo directly.'
         });
       }
     });
@@ -179,6 +350,19 @@ function initDestinationButtons() {
           desc: 'The dedicated client intake application collects project details, preferred service tier, visual style preferences, and wedding specifics. Once deployed, clicking this button directs clients straight into the intake portal.'
         });
       }
+    });
+  });
+}
+
+/**
+ * Interactive Design Transformer Hover / Selection in Style Explainer
+ */
+function initStyleTransformer() {
+  const cards = document.querySelectorAll('.styles-factor-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      cards.forEach(c => c.style.borderColor = 'rgba(255, 255, 255, 0.08)');
+      card.style.borderColor = 'var(--color-accent)';
     });
   });
 }

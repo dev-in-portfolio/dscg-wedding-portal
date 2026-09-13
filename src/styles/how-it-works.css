@@ -7,7 +7,9 @@
 }
 
 .process-step-card {
-  background-color: var(--color-surface);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-lg) var(--space-md);
@@ -15,6 +17,13 @@
   flex-direction: column;
   position: relative;
   box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.process-step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
 .process-step-num {
@@ -24,19 +33,20 @@
   color: var(--color-accent);
   line-height: 1;
   margin-bottom: var(--space-sm);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
 .process-step-title {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #FFFFFF;
   margin-bottom: var(--space-xs);
 }
 
 .process-step-desc {
   font-size: 0.875rem;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 @media (max-width: 1040px) {
