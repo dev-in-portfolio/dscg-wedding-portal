@@ -5,3 +5,7 @@ dist
 
 # Local Netlify folder
 .netlify
+
+# Verification scripts
+verify_*.js
+audit_*.js
