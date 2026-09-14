@@ -15,7 +15,7 @@ export const CONFIG = {
   WEDDING_WEBSITE_DEMO_URL: 'https://wedding-website-demo-960.netlify.app',
 
   // Site 4: Wedding Weekend / Destination Demo (★★★)
-  WEEKEND_DESTINATION_DEMO_URL: '',
+  WEEKEND_DESTINATION_DEMO_URL: 'https://wedding-weekend-destination-demo.netlify.app',
 
   // Site 5: DSCG Wedding Intake Application
   WEDDING_INTAKE_URL: '',

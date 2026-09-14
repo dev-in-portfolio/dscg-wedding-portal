@@ -31,7 +31,7 @@ Destination links to Sites 2–5 are centrally managed in:
 export const CONFIG = {
   ESSENTIAL_DEMO_URL: 'https://wedding-essential-demo.netlify.app',
   WEDDING_WEBSITE_DEMO_URL: 'https://wedding-website-demo-960.netlify.app',
-  WEEKEND_DESTINATION_DEMO_URL: '',
+  WEEKEND_DESTINATION_DEMO_URL: 'https://wedding-weekend-destination-demo.netlify.app',
   WEDDING_INTAKE_URL: '',
   // ...
 };
