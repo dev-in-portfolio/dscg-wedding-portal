@@ -12,7 +12,7 @@ export const CONFIG = {
   ESSENTIAL_DEMO_URL: 'https://wedding-essential-demo.netlify.app',
 
   // Site 3: Wedding Website Demo (★★)
-  WEDDING_WEBSITE_DEMO_URL: '',
+  WEDDING_WEBSITE_DEMO_URL: 'https://wedding-website-demo-960.netlify.app',
 
   // Site 4: Wedding Weekend / Destination Demo (★★★)
   WEEKEND_DESTINATION_DEMO_URL: '',
