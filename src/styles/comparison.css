@@ -126,6 +126,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.35rem 0.75rem;
   padding-block: 0.55rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 0.875rem;
@@ -151,5 +152,17 @@
   }
   .comparison-mobile-list {
     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-mobile-row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .comparison-mobile-value {
+    margin-left: auto;
+    max-width: 58%;
   }
 }

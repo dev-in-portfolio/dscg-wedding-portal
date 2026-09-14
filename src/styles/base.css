@@ -182,6 +182,7 @@ section[id] {
   border: 1px solid transparent;
   position: relative;
   overflow: hidden;
+  min-width: 0;
 }
 
 .btn:focus-visible {
@@ -326,5 +327,31 @@ section[id] {
   
   #starlight-canvas {
     display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-inline: var(--space-sm);
+  }
+
+  .section {
+    padding-block: var(--space-2xl);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-title {
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    white-space: normal;
   }
 }

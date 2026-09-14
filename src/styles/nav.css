@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   height: 5rem;
+  min-width: 0;
 }
 
 .brand-link {
@@ -30,6 +31,7 @@
   align-items: center;
   gap: 0.9rem;
   text-decoration: none;
+  min-width: 0;
 }
 
 .brand-mark {
@@ -56,6 +58,7 @@
 .brand-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .brand-name {
@@ -199,5 +202,27 @@
   }
   .mobile-toggle {
     display: flex;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-link {
+    gap: 0.65rem;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .brand-name {
+    font-size: 0.875rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
   }
 }
