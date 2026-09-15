@@ -107,6 +107,20 @@
   padding: var(--space-md);
 }
 
+.comparison-mobile-card-featured .comparison-mobile-header,
+.comparison-mobile-card-featured .comparison-mobile-row {
+  border-color: rgba(6, 7, 10, 0.14);
+}
+
+.comparison-mobile-card-featured .comparison-mobile-title,
+.comparison-mobile-card-featured .comparison-mobile-value {
+  color: #06070A;
+}
+
+.comparison-mobile-card-featured .comparison-mobile-label {
+  color: #4A4F5A;
+}
+
 .comparison-mobile-header {
   display: flex;
   justify-content: space-between;
