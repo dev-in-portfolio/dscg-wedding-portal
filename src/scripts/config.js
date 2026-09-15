@@ -18,7 +18,7 @@ export const CONFIG = {
   WEEKEND_DESTINATION_DEMO_URL: 'https://wedding-weekend-destination-demo.netlify.app',
 
   // Site 5: DSCG Wedding Intake Application
-  WEDDING_INTAKE_URL: 'https://websites-intake.darkstarconsultinggroup.com/intake',
+  WEDDING_INTAKE_URL: 'https://dscg-wedding-intake.netlify.app/',
 
   // Metadata
   COMPANY_NAME: 'Dark Star Consulting Group',
