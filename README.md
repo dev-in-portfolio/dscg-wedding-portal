@@ -7,16 +7,16 @@ The **DSCG Wedding Portal** is the dedicated commercial sales, package compariso
 This repository is **Site 1 of 5** in the authoritative DSCG Wedding Websites ecosystem:
 
 1. **Site 1: DSCG Wedding Portal** *(This Repository)*
-2. **Site 2: Wedding Essential Demo (★)**
-3. **Site 3: Wedding Website Demo (★★)**
-4. **Site 4: Wedding Weekend / Destination Demo (★★★)**
+2. **Site 2: Wedding Essential Demo (★★★)**
+3. **Site 3: Wedding Website Demo (★★★★)**
+4. **Site 4: Wedding Weekend / Destination Demo (★★★★★)**
 5. **Site 5: DSCG Wedding Intake**
 
 ## Authorized Products & Starting Pricing
 
-- **Wedding Essential (★)**: Starting at **$495** — Straightforward, elegant wedding presence.
-- **Wedding Website (★★)**: Starting at **$795** — The complete general-purpose wedding website for most couples.
-- **Wedding Weekend / Destination (★★★)**: Starting at **$1,195** — Expanded web experience for multi-day and destination celebrations.
+- **Wedding Essential (★★★)**: Starting at **$495** — Straightforward, elegant wedding presence.
+- **Wedding Website (★★★★)**: Starting at **$795** — The complete general-purpose wedding website for most couples.
+- **Wedding Weekend / Destination (★★★★★)**: Starting at **$1,195** — Expanded web experience for multi-day and destination celebrations.
 
 ## Demo Model: 3 Demos × 5 Selectable Styles = 15 Visual Experiences
 
@@ -47,7 +47,7 @@ When these URLs are configured, visitors are directed to the live deployments. I
 
 ## Quality & Complexity Boundaries
 
-- Strict **★★★ complexity ceiling** (no unrequested booking engines, guest SaaS portals, or software overhead).
+- Strict **★★★★★ complexity ceiling** (no unrequested booking engines, guest SaaS portals, or software overhead).
 - Mobile-first, fully responsive, and accessible design.
 - Respects `prefers-reduced-motion`.
 

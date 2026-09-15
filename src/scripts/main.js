@@ -309,17 +309,17 @@ function initDestinationButtons() {
       if (targetKey === 'essential') {
         targetUrl = CONFIG.ESSENTIAL_DEMO_URL;
         targetName = 'Wedding Essential Demo';
-        targetTier = 'Tier ★ (Essential)';
+        targetTier = 'Tier ★★★ (Essential)';
         repoId = 'Site 2: Wedding Essential Demo';
       } else if (targetKey === 'website') {
         targetUrl = CONFIG.WEDDING_WEBSITE_DEMO_URL;
         targetName = 'Wedding Website Demo';
-        targetTier = 'Tier ★★ (Standard Website)';
+        targetTier = 'Tier ★★★★ (Standard Website)';
         repoId = 'Site 3: Wedding Website Demo';
       } else if (targetKey === 'destination') {
         targetUrl = CONFIG.WEEKEND_DESTINATION_DEMO_URL;
         targetName = 'Wedding Weekend / Destination Demo';
-        targetTier = 'Tier ★★★ (Weekend & Destination)';
+        targetTier = 'Tier ★★★★★ (Weekend & Destination)';
         repoId = 'Site 4: Wedding Weekend / Destination Demo';
       }
 
