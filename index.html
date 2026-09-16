@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="/src/styles/cta-footer.css">
   <link rel="stylesheet" href="/src/styles/recognition.css">
   <link rel="stylesheet" href="/src/styles/modal.css">
+  <script data-dscg-analytics="true" data-property-id="dscg-wedding-portal" data-environment="portal" data-endpoint="https://analytics.darkstarconsultinggroup.com/api/collect" data-consent-mode="required" data-privacy-profile="standard" data-registry-version="1" src="https://analytics.darkstarconsultinggroup.com/tracker.js" defer></script>
 </head>
 <body>
   <!-- Ambient Starlight & Nebula Canvas -->
@@ -1127,7 +1128,25 @@
     </div>
   </div>
 
+  <aside id="analytics-consent" aria-label="Optional usage analytics" style="position:fixed;right:16px;bottom:16px;z-index:50;max-width:360px;padding:16px;border:1px solid #d8d1c8;border-radius:12px;background:#fffaf5;box-shadow:0 12px 30px #0002;color:#211d2b;font-size:13px">
+    <strong>Optional usage analytics</strong>
+    <p style="margin:8px 0">Allow generic navigation and engagement metadata only. Client content and form values are never collected.</p>
+    <button id="allow-analytics" type="button">Allow</button>
+    <button id="decline-analytics" type="button">Decline</button>
+  </aside>
+
   <!-- Scripts -->
   <script type="module" src="/src/scripts/main.js"></script>
+  <script>
+    (() => {
+      const key = "dscg-wedding-portal-analytics-consent-v1";
+      const banner = document.getElementById("analytics-consent");
+      const apply = (value) => { localStorage.setItem(key, value); window.DSCGAnalytics?.setConsent(value); if (banner) banner.hidden = true; };
+      const stored = localStorage.getItem(key);
+      if (stored === "accepted" || stored === "declined") apply(stored);
+      document.getElementById("allow-analytics")?.addEventListener("click", () => apply("accepted"));
+      document.getElementById("decline-analytics")?.addEventListener("click", () => apply("declined"));
+    })();
+  </script>
 </body>
 </html>
