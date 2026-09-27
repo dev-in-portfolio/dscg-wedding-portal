@@ -1,6 +1,8 @@
 import { CONFIG, isUrlConfigured } from './config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  window.DSCGAnalytics?.screen('wedding-portal');
+  window.DSCGAnalytics?.section('portal-collection');
   initStarlightCanvas();
   initHeaderScroll();
   initMobileNav();
