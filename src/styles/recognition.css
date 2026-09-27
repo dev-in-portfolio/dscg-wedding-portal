@@ -22,12 +22,24 @@
   flex: 0 0 clamp(120px, 17vw, 165px);
 }
 
+.recognition-badge-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  align-items: center;
+}
+
 .recognition-badge {
   display: block;
   width: 100%;
   height: auto;
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.2));
+}
+
+.recognition-badge-prestige {
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 0 16px rgba(242, 72, 28, 0.16));
 }
 
 .recognition-copy {
