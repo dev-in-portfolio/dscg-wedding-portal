@@ -42,6 +42,13 @@
   filter: drop-shadow(0 0 16px rgba(242, 72, 28, 0.16));
 }
 
+.recognition-badge-corporate-vision {
+  grid-column: 1 / -1;
+  width: 100%;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 0 12px rgba(68, 211, 220, 0.14));
+}
+
 .recognition-copy {
   min-width: 0;
 }
