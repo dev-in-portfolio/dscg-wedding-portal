@@ -9,16 +9,16 @@
 
 export const CONFIG = {
   // Site 2: Wedding Essential Demo (★★★)
-  ESSENTIAL_DEMO_URL: 'https://wedding-essential-demo.netlify.app',
+  ESSENTIAL_DEMO_URL: 'https://wedding-essential-demo.darkstarconsultinggroup.com',
 
   // Site 3: Wedding Website Demo (★★★★)
-  WEDDING_WEBSITE_DEMO_URL: 'https://wedding-website-demo-960.netlify.app',
+  WEDDING_WEBSITE_DEMO_URL: 'https://wedding-website-demo-960.darkstarconsultinggroup.com',
 
   // Site 4: Wedding Weekend / Destination Demo (★★★★★)
-  WEEKEND_DESTINATION_DEMO_URL: 'https://wedding-weekend-destination-demo.netlify.app',
+  WEEKEND_DESTINATION_DEMO_URL: 'https://wedding-weekend-destination-demo.darkstarconsultinggroup.com',
 
   // Site 5: DSCG Wedding Intake Application
-  WEDDING_INTAKE_URL: 'https://dscg-wedding-intake.netlify.app/',
+  WEDDING_INTAKE_URL: 'https://wedding-intake.darkstarconsultinggroup.com/',
 
   // Metadata
   COMPANY_NAME: 'Dark Star Consulting Group',

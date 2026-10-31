@@ -29,10 +29,10 @@ Destination links to Sites 2–5 are centrally managed in:
 
 ```javascript
 export const CONFIG = {
-  ESSENTIAL_DEMO_URL: 'https://wedding-essential-demo.netlify.app',
-  WEDDING_WEBSITE_DEMO_URL: 'https://wedding-website-demo-960.netlify.app',
-  WEEKEND_DESTINATION_DEMO_URL: 'https://wedding-weekend-destination-demo.netlify.app',
-  WEDDING_INTAKE_URL: 'https://dscg-wedding-intake.netlify.app/',
+  ESSENTIAL_DEMO_URL: 'https://wedding-essential-demo.darkstarconsultinggroup.com',
+  WEDDING_WEBSITE_DEMO_URL: 'https://wedding-website-demo-960.darkstarconsultinggroup.com',
+  WEEKEND_DESTINATION_DEMO_URL: 'https://wedding-weekend-destination-demo.darkstarconsultinggroup.com',
+  WEDDING_INTAKE_URL: 'https://wedding-intake.darkstarconsultinggroup.com/',
   // ...
 };
 ```
